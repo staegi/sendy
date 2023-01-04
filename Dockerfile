@@ -71,7 +71,7 @@ CMD ["apache2-foreground"]
 FROM sendy as debug
 # Install xdebug extension
 RUN pecl channel-update pecl.php.net \
-  && pecl install xdebug \
+  && pecl install xdebug-2.9.0 \
   && docker-php-ext-enable xdebug \
   && rm -rf /tmp/pear 
 
